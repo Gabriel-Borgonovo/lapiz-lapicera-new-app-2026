@@ -1,8 +1,4 @@
 [
-{"type":"header","version":"5.2.2","comment":"Export to JSON plugin for PHPMyAdmin"},
-{"type":"database","name":"u295159553_libreria_2"},
-{"type":"table","name":"products","database":"u295159553_libreria_2","data":
-[
 {"id":"16","order":null,"barcode":"6932177474053","name":"Calculadora ASB Cientifica AS-82MS","image":"https:\/\/lapiz-lapicera-admin.migbweb.com\/imgs\/products\/comercial-y-oficina\/AcZZLt5nMAlGbCDTgrI2SaeDQSrs8ScqJnN8lGvv.webp","category":"comercial y oficina","unit_type":"unit","purchase_price":"5612.00","profit_margin":"70.00","sale_price":"9540.40","stock":"2","created_at":"2024-09-27 19:52:57","updated_at":"2024-10-19 19:10:58"},
 {"id":"17","order":null,"barcode":"7798112020056","name":"Tinta P\/Sello Sta x50cc","image":"https:\/\/lapiz-lapicera-admin.migbweb.com\/imgs\/products\/comercial-y-oficina\/0Ld8gW9PzGGBWxSMR77RhAseLc1Q1aqLDwnZ4YBh.webp","category":"comercial y oficina","unit_type":"unit","purchase_price":"2300.00","profit_margin":"80.00","sale_price":"4140.00","stock":"1","created_at":"2024-09-27 19:55:11","updated_at":"2026-07-17 13:13:51"},
 {"id":"18","order":null,"barcode":"5306038554","name":"tinta china  señorita  15 cc","image":"https:\/\/lapiz-lapicera-admin.migbweb.com\/imgs\/products\/comercial-y-oficina\/VRkCEtCDbRPSs2XpbBkAgHh2uee7TRsRDMZOO7Ru.jpg","category":"comercial y oficina","unit_type":"unit","purchase_price":"1300.00","profit_margin":"70.00","sale_price":"2210.00","stock":"1","created_at":"2024-09-27 20:04:04","updated_at":"2024-09-27 20:04:04"},
@@ -1518,5 +1514,4 @@
 {"id":"1615","order":null,"barcode":"7502277852502","name":"Cinta Correctora Sabonis Retractil Bwhite 966l","image":"https:\/\/lapiz-lapicera-admin.migbweb.com\/imgs\/products\/escolar\/djwrlHfiiQ9BFbYhdrlrTNq7uWeBDG1M2OYySwmg.webp","category":"escolar","unit_type":"unit","purchase_price":"3800.00","profit_margin":"80.00","sale_price":"6840.00","stock":"2","created_at":"2026-10-05 13:32:10","updated_at":"2026-10-05 13:32:10"},
 {"id":"1616","order":null,"barcode":"7502277852786","name":"Tijera Sabonis TI-001","image":"https:\/\/lapiz-lapicera-admin.migbweb.com\/imgs\/products\/artistica\/CYrqQoVMQ7TMml65qsB0jj3PkBlsknxf6LB8pVaC.webp","category":"artistica","unit_type":"unit","purchase_price":"1300.00","profit_margin":"90.00","sale_price":"2470.00","stock":"3","created_at":"2026-10-05 15:07:05","updated_at":"2026-10-05 15:07:18"}
 ]
-}
-]
+
