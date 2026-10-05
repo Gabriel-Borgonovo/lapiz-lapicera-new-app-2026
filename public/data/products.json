@@ -1,5 +1,14 @@
 [
   {
+    "id": 1791212686166,
+    "name": "producto para probar sistema en production",
+    "barcode": "2135446546",
+    "sale_price": 1111,
+    "category": "1",
+    "image": "https://res.cloudinary.com/pqomyq0t/image/upload/v1791212676/hipqjtep1vptneccnukp.png",
+    "unit_type": "unit"
+  },
+  {
     "id": "16",
     "order": null,
     "barcode": "6932177474053",
@@ -9,7 +18,7 @@
     "unit_type": "unit",
     "purchase_price": "5612.00",
     "profit_margin": "70.00",
-    "sale_price": 9541.4,
+    "sale_price": 9540.4,
     "stock": "2",
     "created_at": "2024-09-27 16:52:57",
     "updated_at": "2024-10-19 16:10:58"
