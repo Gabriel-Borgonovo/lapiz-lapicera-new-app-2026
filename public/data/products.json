@@ -1,14 +1,5 @@
 [
   {
-    "id": 1791212686166,
-    "name": "producto para probar sistema en production",
-    "barcode": "2135446546",
-    "sale_price": 1111,
-    "category": "1",
-    "image": "https://res.cloudinary.com/pqomyq0t/image/upload/v1791212676/hipqjtep1vptneccnukp.png",
-    "unit_type": "unit"
-  },
-  {
     "id": "16",
     "order": null,
     "barcode": "6932177474053",
