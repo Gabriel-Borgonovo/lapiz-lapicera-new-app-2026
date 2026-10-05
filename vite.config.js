@@ -8,5 +8,5 @@ export default defineConfig({
     react(), 
     tailwindcss()
   ],
-  base: '/lapiz-lapicera-new-app-2026/',
+  base: '/',
 })

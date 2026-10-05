@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { storageHelper } from '../utils/storageHelper'
 import { backupHelper } from '../utils/backupHelper'
 
+
 export const useProducts = () => {
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
@@ -32,10 +33,12 @@ export const useProducts = () => {
   return Array.from(productsMap.values())
 }
 
-  /**
+
+/**
    * Carga los datos de los productos combinando la fuente remota y local
    */
-  const loadProducts = useCallback(async () => {
+ 
+ const loadProducts = useCallback(async () => {
     setLoading(true)
     setError(null)
     try {
@@ -79,7 +82,7 @@ export const useProducts = () => {
 
     window.addEventListener('storage', handleStorageChange)
     return () => window.removeEventListener('storage', handleStorageChange)
-  }, [loadProducts])
+  }, [loadProducts]) 
 
   /**
    * Agrega un nuevo producto o actualiza uno existente
