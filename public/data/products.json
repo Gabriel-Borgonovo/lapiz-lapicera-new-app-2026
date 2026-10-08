@@ -22708,5 +22708,16 @@
     "stock": "3",
     "created_at": "2026-10-05 12:07:05",
     "updated_at": "2026-10-05 12:07:18"
+  },
+  {
+    "id": 1791243926936,
+    "name": "sdfgsdg",
+    "barcode": "4546465",
+    "purchase_price": "100.00",
+    "profit_margin": "30.00",
+    "sale_price": 130,
+    "category": "1",
+    "image": "",
+    "unit_type": "unit"
   }
 ]

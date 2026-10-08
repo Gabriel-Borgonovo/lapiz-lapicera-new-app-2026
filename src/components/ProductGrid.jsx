@@ -1,7 +1,7 @@
 import React from 'react'
 import { ProductCard } from './ProductCard'
 
-export const ProductGrid = ({ products, loading, onEditProduct }) => {
+export const ProductGrid = ({ products, loading, onEditProduct, onDeleteProduct }) => {
   if (loading) {
     return (
       <div className="max-w-7xl mx-auto px-4 py-16 text-center">
@@ -33,6 +33,7 @@ export const ProductGrid = ({ products, loading, onEditProduct }) => {
             key={product.id}
             product={product}
             onEdit={onEditProduct}
+            onDelete={onDeleteProduct}
           />
         ))}
       </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { formatCurrency } from '../utils/formatters'
 
-export const ProductCard = ({ product, onEdit }) => {
+export const ProductCard = ({ product, onEdit, onDelete }) => {
   const [imgError, setImgError] = useState(false)
 
   const { name, barcode, sale_price, category, image, unit_type } = product
@@ -26,12 +26,21 @@ export const ProductCard = ({ product, onEdit }) => {
           </div>
         )}
 
-        {/* Badge Categoría */}
+       {/* Badge Categoría */}
         {category && (
-          <span className="absolute top-2 left-2 bg-slate-950/80 backdrop-blur-md text-slate-300 text-[10px] font-semibold px-2 py-0.5 rounded-md capitalize border border-slate-800">
+          <span className="absolute top-2 left-2 bg-slate-950/80 backdrop-blur-md text-slate-300 text-[10px] font-semibold px-2 py-0.5 rounded-md capitalize border border-slate-800 z-10">
             {category}
           </span>
         )}
+
+        {/* Botón Eliminar Flotante */}
+        <button
+          onClick={() => onDelete(product.id)}
+          className="absolute top-2 right-2 bg-slate-950/80 hover:bg-red-600 text-slate-300 hover:text-white p-1.5 rounded-lg border border-slate-800 transition-colors z-10 cursor-pointer opacity-90 group-hover:opacity-100"
+          title="Eliminar producto"
+        >
+          🗑️
+        </button>
       </div>
 
       {/* Contenido / Detalles */}
@@ -55,7 +64,7 @@ export const ProductCard = ({ product, onEdit }) => {
           </h3>
         </div>
 
-        {/* Precio y Botón de Edición */}
+        {/* Precio y Acciones */}
         <div className="pt-2 border-t border-slate-800/80 flex items-center justify-between">
           <div>
             <span className="text-[10px] text-slate-400 block uppercase tracking-wider">Precio Final</span>
@@ -64,14 +73,17 @@ export const ProductCard = ({ product, onEdit }) => {
             </span>
           </div>
 
-          <button
-            onClick={() => onEdit(product)}
-            className="bg-slate-800 hover:bg-indigo-600 text-slate-300 hover:text-white text-xs font-medium px-3 py-1.5 rounded-lg transition-colors duration-200 cursor-pointer flex items-center gap-1 border border-slate-700 hover:border-indigo-500"
-            title="Modificar precio o datos"
-          >
-            <span>✏️</span>
-            <span>Editar</span>
-          </button>
+          <div className="flex items-center gap-1.5">
+            <button
+              onClick={() => onEdit(product)}
+              className="bg-slate-800 hover:bg-indigo-600 text-slate-300 hover:text-white text-xs font-medium px-2.5 py-1.5 rounded-lg transition-colors duration-200 cursor-pointer flex items-center gap-1 border border-slate-700 hover:border-indigo-500"
+              title="Modificar precio o datos"
+            >
+              <span>✏️</span>
+              <span>Editar</span>
+            </button>
+
+          </div>
         </div>
       </div>
 

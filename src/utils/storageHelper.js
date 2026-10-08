@@ -1,6 +1,7 @@
 // Claves únicas de almacenamiento en localStorage
 const STORAGE_KEYS = {
   MODIFIED_PRODUCTS: 'cat_modified_products', // Cambios/nuevos guardados por el usuario
+  DELETED_PRODUCTS: 'cat_deleted_products',   // IDs de productos eliminados
   CUSTOM_BACKUP: 'cat_custom_backup',         // Respaldo completo importado manualmente
 }
 
@@ -68,6 +69,35 @@ export const storageHelper = {
     setStorageItem(STORAGE_KEYS.MODIFIED_PRODUCTS, updatedChanges)
   },
 
+
+
+  /**
+   * Obtiene la lista de IDs de productos eliminados.
+   * @returns {Array<string>} Lista de IDs eliminados.
+   */
+  getDeletedIds: () => {
+    return getStorageItem(STORAGE_KEYS.DELETED_PRODUCTS) || []
+  },
+
+  /**
+   * Guarda un ID en la lista de eliminados. Si el producto estaba editado en MODIFIED_PRODUCTS, lo remueve de allí.
+   * @param {string|number} productId - ID del producto a eliminar.
+   */
+  saveDeletedId: (productId) => {
+    const deletedIds = getStorageItem(STORAGE_KEYS.DELETED_PRODUCTS) || []
+    const strId = String(productId)
+
+    if (!deletedIds.includes(strId)) {
+      setStorageItem(STORAGE_KEYS.DELETED_PRODUCTS, [...deletedIds, strId])
+    }
+
+    // Si el producto estaba guardado en modificaciones locales, lo removemos para liberar espacio
+    const currentChanges = getStorageItem(STORAGE_KEYS.MODIFIED_PRODUCTS) || []
+    const updatedChanges = currentChanges.filter((p) => String(p.id) !== strId)
+    setStorageItem(STORAGE_KEYS.MODIFIED_PRODUCTS, updatedChanges)
+  },
+
+
   /**
    * Guarda un respaldo completo (usado cuando el usuario importa un archivo JSON).
    * @param {Array} fullCatalog - Lista completa de productos importada.
@@ -90,6 +120,7 @@ export const storageHelper = {
   clearAll: () => {
     try {
       localStorage.removeItem(STORAGE_KEYS.MODIFIED_PRODUCTS)
+      localStorage.removeItem(STORAGE_KEYS.DELETED_PRODUCTS)
       localStorage.removeItem(STORAGE_KEYS.CUSTOM_BACKUP)
     } catch (error) {
       console.error('Error al limpiar localStorage:', error)

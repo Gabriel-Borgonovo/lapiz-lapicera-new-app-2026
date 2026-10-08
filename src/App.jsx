@@ -12,6 +12,7 @@ export default function App() {
     loading,
     categories,
     saveProduct,
+    deleteProduct,
     exportBackup,
     importBackup,
     resetToBase,
@@ -90,6 +91,7 @@ export default function App() {
           products={filteredProducts}
           loading={loading}
           onEditProduct={handleOpenEditModal}
+          onDeleteProduct={deleteProduct}
         />
       </div>
 
